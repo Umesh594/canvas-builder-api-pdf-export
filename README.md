@@ -12,11 +12,11 @@ An interactive web application that allows users to draw,add shapes,text and ima
    Export as PDF with size compression if required.
 
 # Backend Functionality
-   -API endpoints to:
-   -Initialize canvas
-   -Add rectangle,circle,text,images
-   -Save freehand strokes
-   -Export current canvas as PDF
+-  API endpoints to:
+-  Initialize canvas
+-  Add rectangle,circle,text,images
+-  Save freehand strokes
+-  Export current canvas as PDF
 
 # Tech Stack Used
    Frontend: HTML,CSS,JavaScript
