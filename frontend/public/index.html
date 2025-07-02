@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Canvas Builder</h1>
+        
+        <div class="app-container">
+            <div class="controls">
+                <h2>Canvas Controls</h2>
+                
+                <div class="control-group">
+                    <h3>Initialize Canvas</h3>
+                    <div class="form-group">
+                        <label for="canvasWidth">Width:</label>
+                        <input type="number" id="canvasWidth" value="800" min="100" max="2000">
+                    </div>
+                    <div class="form-group">
+                        <label for="canvasHeight">Height:</label>
+                        <input type="number" id="canvasHeight" value="600" min="100" max="2000">
+                    </div>
+                    <button id="initCanvas">Initialize Canvas</button>
+                </div>
+                
+                <div class="control-group">
+                    <h3>Add Rectangle</h3>
+                    <div class="form-group">
+                        <label for="rectX">X:</label>
+                        <input type="number" id="rectX" value="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="rectY">Y:</label>
+                        <input type="number" id="rectY" value="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="rectWidth">Width:</label>
+                        <input type="number" id="rectWidth" value="100">
+                    </div>
+                    <div class="form-group">
+                        <label for="rectHeight">Height:</label>
+                        <input type="number" id="rectHeight" value="80">
+                    </div>
+                    <div class="form-group">
+                        <label for="rectColor">Color:</label>
+                        <input type="color" id="rectColor" value="#FF0000">
+                    </div>
+                    <button id="addRectangle">Add Rectangle</button>
+                </div>
+                
+                <div class="control-group">
+                    <h3>Add Circle</h3>
+                    <div class="form-group">
+                        <label for="circleX">X:</label>
+                        <input type="number" id="circleX" value="200">
+                    </div>
+                    <div class="form-group">
+                        <label for="circleY">Y:</label>
+                        <input type="number" id="circleY" value="200">
+                    </div>
+                    <div class="form-group">
+                        <label for="circleRadius">Radius:</label>
+                        <input type="number" id="circleRadius" value="50">
+                    </div>
+                    <div class="form-group">
+                        <label for="circleColor">Color:</label>
+                        <input type="color" id="circleColor" value="#00FF00">
+                    </div>
+                    <button id="addCircle">Add Circle</button>
+                </div>
+                
+                <div class="control-group">
+                    <h3>Add Text</h3>
+                    <div class="form-group">
+                        <label for="textX">X:</label>
+                        <input type="number" id="textX" value="100">
+                    </div>
+                    <div class="form-group">
+                        <label for="textY">Y:</label>
+                        <input type="number" id="textY" value="100">
+                    </div>
+                    <div class="form-group">
+                        <label for="textContent">Text:</label>
+                        <input type="text" id="textContent" value="Hello World">
+                    </div>
+                    <div class="form-group">
+                        <label for="textColor">Color:</label>
+                        <input type="color" id="textColor" value="#000000">
+                    </div>
+                    <div class="form-group">
+                        <label for="textSize">Font Size:</label>
+                        <input type="number" id="textSize" value="24" min="8" max="72">
+                    </div>
+                    <button id="addText">Add Text</button>
+                </div>
+                
+                <div class="control-group">
+                    <h3>Add Image (URL)</h3>
+                    <div class="form-group">
+                        <label for="imageUrlX">X:</label>
+                        <input type="number" id="imageUrlX" value="300">
+                    </div>
+                    <div class="form-group">
+                        <label for="imageUrlY">Y:</label>
+                        <input type="number" id="imageUrlY" value="300">
+                    </div>
+                    <div class="form-group">
+                        <label for="imageUrlWidth">Width:</label>
+                        <input type="number" id="imageUrlWidth" value="150">
+                    </div>
+                    <div class="form-group">
+                        <label for="imageUrlHeight">Height:</label>
+                        <input type="number" id="imageUrlHeight" value="150">
+                    </div>
+                    <div class="form-group">
+                        <label for="imageUrl">Image URL:</label>
+                        <input type="text" id="imageUrl" placeholder="https://example.com/image.jpg">
+                    </div>
+                    <button id="addImageUrl">Add Image from URL</button>
+                </div>
+                
+                <div class="control-group">
+                    <h3>Add Image (Upload)</h3>
+                    <div class="form-group">
+                        <label for="imageUploadX">X:</label>
+                        <input type="number" id="imageUploadX" value="400">
+                    </div>
+                    <div class="form-group">
+                        <label for="imageUploadY">Y:</label>
+                        <input type="number" id="imageUploadY" value="400">
+                    </div>
+                    <div class="form-group">
+                        <label for="imageUploadWidth">Width:</label>
+                        <input type="number" id="imageUploadWidth" value="150">
+                    </div>
+                    <div class="form-group">
+                        <label for="imageUploadHeight">Height:</label>
+                        <input type="number" id="imageUploadHeight" value="150">
+                    </div>
+                    <div class="form-group">
+                        <label for="imageFile">Image File:</label>
+                        <input type="file" id="imageFile" accept="image/*">
+                    </div>
+                    <button id="addImageUpload">Add Image from Upload</button>
+                </div>
+                
+                <div class="control-group">
+                    <h3>Export</h3>
+                    <div class="form-group">
+        <label>
+            <input type="checkbox" id="compressPdf">
+            Enable PDF Compression (Smaller Size)
+        </label>
+    </div>
+                    <button id="exportPdf">Export as PDF</button>
+                    <button id="saveStrokes">Save Drawing</button>
+                </div>
+            </div>
+            
+            <div class="preview">
+                <h2>Canvas Preview</h2>
+                <div class="canvas-container">
+                    <canvas id="previewCanvas" width="800" height="600"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
