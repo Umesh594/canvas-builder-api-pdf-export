@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const saveStrokesBtn = document.getElementById('saveStrokes');
     const previewCanvas = document.getElementById('previewCanvas');
     const ctx = previewCanvas.getContext('2d');
-    const API_BASE_URL = 'http://localhost:5000/api';
+    const API_BASE_URL = 'https://canvas-builder-api-pdf-export-production-95d3.up.railway.app/api';
     let freehandStrokes = [];
     let isDrawing = false;
     let lastX = 0, lastY = 0;
