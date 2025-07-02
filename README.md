@@ -23,7 +23,8 @@ An interactive web application that allows users to draw,add shapes,text and ima
 -   File Uploads: multer
 -   Image Processing: canvas.loadImage
 # Final Notes Before Deployment
-  Put both frontend and backend in the same repo.
-  Push to GitHub using terminal commands above.
-  Use Vercel to deploy backend & frontend separately.
-  Update API_BASE_URL in frontend to point to your deployed backend.
+-  API endpoints to:
+-   Put both frontend and backend in the same repo.
+-   Push to GitHub using terminal commands above.
+-   Use Vercel to deploy backend & frontend separately.
+-   Update API_BASE_URL in frontend to point to your deployed backend.
