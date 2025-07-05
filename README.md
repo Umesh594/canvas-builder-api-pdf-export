@@ -28,3 +28,7 @@ An interactive web application that allows users to draw,add shapes,text and ima
 -   Push to GitHub using terminal commands above.
 -   Use Vercel to deploy backend & frontend separately.
 -   Update API_BASE_URL in frontend to point to your deployed backend.
+# Deployed Version
+- Frontend Deployed on Vercel: https://canvas-builder-api-pdf-export.vercel.app/
+- Backend Deployed on Railway: canvas-builder-api-pdf-export-production.up.railway.app
+- Backend Deployment should be used with /api/canvas
